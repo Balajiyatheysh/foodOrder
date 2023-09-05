@@ -1,0 +1,14 @@
+#heading{
+  color: red;
+}
+#child1{
+  padding: 1rem;
+  border: 2px solid red;
+}
+#child2{
+  padding: 1.5rem;
+  border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
