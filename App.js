@@ -10,9 +10,9 @@ const parent = React.createElement("div", { id: "parent" }, [
     React.createElement("h2", { id: "sibling1" }, "i have a sibling"),
     React.createElement("h4", { id: "sibling2" }, "i have a sibling"),
   ]),
+  React.createElement("h5", { id: "child3" }, "Hello"),
 ]);
 
 console.log(parent);
 
 root.render(parent);
-console.log("i have been rendered.!!");
