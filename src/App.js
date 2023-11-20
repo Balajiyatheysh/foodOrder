@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // for routing our page import createBrowserRouter and RouterProvider for providing router & Outlet for children component for nested routing
-
+import NavBar from "./components/Navbar";
 /* My Food App structure will look like this, 
             1) Header
                 - Logo
@@ -62,6 +62,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/navbar",
+        element: <NavBar />,
       },
     ],
   },
