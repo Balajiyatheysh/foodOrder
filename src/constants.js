@@ -8,17 +8,38 @@ export const ITEM_IMG_CDN_URL =
 
 // Swiggy API to get Restaurant data with corsproxy
 export const swiggy_api_URL =
-  "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.961785&lng=77.534156&page_type=DESKTOP_WEB_LISTING";
 
 // Swiggy API to get Restaurant Menu data with corsproxy
 export const swiggy_menu_api_URL =
-"https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";
+"https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.961785&lng=77.534156&&submitAction=ENTER&restaurantId=";
 
 // shimmer card unit
 export const shimmer_card_unit = 20;
 
 // shimmer Menu card unit 
 export const shimmer_menu_card_unit = 4;
+
+//Github - username
+export const Github_UserName = "Balajiyatheysh";
+export const Github_Repository_Name = "foodOrder";
+
+// Github API for User
+export const Github_API_User = "https://api.github.com/users/";
+
+// Social Media Links
+export const Linkedin_Link = "https://www.linkedin.com/in/balaji-e-a1a795182/";
+export const Twitter_Link = "https://twitter.com/balajiyatheysh";
+export const Github_Link = "https://github.com/Balajiyatheysh";
+export const Email_Link = "mailto:balajiyatheysh87@gmail.com";
+
+// Github Authorization Token
+export const options = {
+  method: "GET",
+  headers: {
+    Authorization: "",
+  },
+};
 
 // menu items api card type key
 export const MENU_ITEM_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
