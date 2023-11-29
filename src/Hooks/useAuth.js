@@ -1,29 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useLocalStorage from "./useLocalStorage";
 
-const useLocalStorage = (key) =>{
-  //get localstorage value
-  const localStorageValue = localStorage.getItem(key)
+const useAuth=()=>{
+  //call custom hook useLocalStorage for getting localstorage value of user
+  const [getLocalStorage] = useLocalStorage("user");
 
-  //initial value of localstorage
-  const [getLocalStorage, setLocalStorageValue] = useState(localStorageValue ? JSON.parse(localStorageValue):null)
-  
-  useEffect(()=>{
-    if (localStorageValue) {
-      setLocalStorageValue(JSON.parse(localStorageValue));
-    } else {
-      setLocalStorageValue(null);
-    }
-  },[localStorageValue])
+  //use useState for user logged in or loggen out
+  const [isLoggedin, setIsLoggedin] = useState(getLocalStorage?.token?.length ===100 ? true : false);
 
-  //set value in localstorage
-  const setLocalStorage = (value)=>{
-    localStorage.setItem(key, JSON.stringify(value))
-  }
+  return [isLoggedin, setIsLoggedin];
 
-  //clear value in localStorage
-  const clearLocalSotrage =()=>{
-    localStorage.clear();
-  }
-
-  return [getLocalStorage, setLocalStorage, clearLocalSotrage]
 }
+
+export default useAuth;
