@@ -52,7 +52,7 @@ class ProfileRepoClass extends Component{
                   <h3>
                     <a href={repo.html_url} target="_blank" rel='noopener noreferrer'>
                       <BiGitRepoForked />
-                      <span>{repo.forks_count} Forks</span>
+                      <span>{repo.forks_count} Github Repo Forks</span>
                     </a>
                   </h3>
                   <h3>
