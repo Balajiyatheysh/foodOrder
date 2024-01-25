@@ -6,15 +6,22 @@ import { Link } from "react-router-dom";
 
 // Filter the restaurant data according input type
 function filterData(searchText, restaurants) {
+
   const resFilterData = restaurants.filter((restaurant) =>
+
     restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+
   );
+
   return resFilterData;
+
 }
 
 // Body Component for body section: It contain all restaurant cards
 const Body = () => {
+
   // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
+  
   const [searchText, setSearchText] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -52,8 +59,11 @@ const Body = () => {
       // update the state variable restaurants with Swiggy API data
       setAllRestaurants(resData);
       setFilteredRestaurants(resData);
+
     } catch (error) {
+
       console.log(error);
+
     }
   }
 

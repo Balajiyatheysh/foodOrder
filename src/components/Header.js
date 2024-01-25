@@ -5,6 +5,7 @@ import useOnline from "../Hooks/useOnline";
 import useAuth from "../Hooks/useAuth";
 import useLocalStorage from "../Hooks/useLocalStorage";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 // Title component for display logo
 const Title = () => (
@@ -33,17 +34,22 @@ const Header = () => {
     if (getLocalStorage === null) {
       setIsLoggedin(false);
     }
-  }, [getLocalStorage])
+  }, [getLocalStorage]);
 
   // call custom hook useOnline if user is online or not
   const isOnline = useOnline();
+
+  //subscribing to the store using a selectors
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="header">
       <Title />
 
       {/* if user is logged in then display userName */}
-      {isLoggedin && <div className="user-name">Hi {getLocalStorage?.userName}!</div>}
+      {isLoggedin && (
+        <div className="user-name">Hi {getLocalStorage?.userName}!</div>
+      )}
 
       <div className="nav-items">
         <ul>
@@ -58,7 +64,10 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <i className="fa-solid fa-cart-shopping"></i>
+            <Link to="/cart">
+              <i className="fa-solid fa-cart-shopping"></i>
+              <span>{cartItems.length} items</span>
+            </Link>
           </li>
           <li>
             {/* use conditional rendering for login and logout */}
@@ -66,21 +75,33 @@ const Header = () => {
               <button
                 className="logout-btn"
                 onClick={() => {
-                  clearLocalStorage()
+                  clearLocalStorage();
                   setIsLoggedin(false);
                 }}
               >
-                Logout<span className={isOnline ? "login-btn-green" : "login-btn-red"}> ●</span>
+                Logout
+                <span
+                  className={isOnline ? "login-btn-green" : "login-btn-red"}
+                >
+                  {" "}
+                  ●
+                </span>
               </button>
             ) : (
               <button className="login-btn" onClick={() => navigate("/login")}>
-                Login<span className={isOnline ? "login-btn-green" : "login-btn-red"}> ●</span>
+                Login
+                <span
+                  className={isOnline ? "login-btn-green" : "login-btn-red"}
+                >
+                  {" "}
+                  ●
+                </span>
               </button>
             )}
           </li>
         </ul>
       </div>
-    </div >
+    </div>
   );
 };
 
