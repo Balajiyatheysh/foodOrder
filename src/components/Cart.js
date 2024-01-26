@@ -1,7 +1,9 @@
-export default function Cart (){
+const Cart = ()=>{
   return (
-    <div>
-      Cart
+    <div className="cart-container">
+      <h1> Cart </h1> 
     </div>
   )
 }
+
+export default Cart
