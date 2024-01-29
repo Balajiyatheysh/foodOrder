@@ -28,4 +28,4 @@ const useLocalStorage = (key) =>{
   return [getLocalStorage, setLocalStorage, clearLocalSotrage]
 }
 
-export default useLocalStorage
+export default useLocalStorage;
