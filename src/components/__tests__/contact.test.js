@@ -7,5 +7,5 @@ test('contact page should be rendered successfully', () => {
 
   const heading = screen.getByRole("heading");
 
-  expect(heading).toBeInTheDocument();
+  expect(heading).toBeInTheDocument()
 });
