@@ -1,4 +1,4 @@
-import { sum } from "../components/Sum";
+import { sum } from "../Sum";
 
 test("should return sum of two numbers", () => {
   const result = sum(3, 5);
