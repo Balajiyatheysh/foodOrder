@@ -1,5 +1,5 @@
-import FoodFireLogo from "../Images/Food Fire Logo.png";
-import { Link } from "react-router-dom"; // imported Link for client side routing
+import { LOGO_URL } from "../constants";
+import { Link } from "react-router-dom"; 
 import { useNavigate } from "react-router-dom";
 import useOnline from "../Hooks/useOnline";
 import useAuth from "../Hooks/useAuth";
@@ -12,7 +12,7 @@ const Title = () => (
   <Link to="/">
     <img
       className="logo"
-      src={FoodFireLogo}
+      src={LOGO_URL}
       alt="Food Fire"
       title="Food Fire"
     />
@@ -66,7 +66,7 @@ const Header = () => {
           <li>
             <Link to="/cart">
               <i className="fa-solid fa-cart-shopping"></i>
-              <span>{cartItems.length} items</span>
+              <span>Cart {cartItems.length} items</span>
             </Link>
           </li>
           <li>

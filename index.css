@@ -1344,9 +1344,28 @@ a {
   .profile-repo .profile-repo-items h3 a {
     font-size: small;
   }
-
 }
 
 .cart-container {
   min-height: 80vh;
-} 
+}
+
+.contact-header {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
+}
+
+.contact-input {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+}
+
+.contact-button {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
