@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { addItems } from "../utils/cartSlice";
 import { IMG_CDN_URL } from "../constants";
 
 const ItemList = ({ items, dummy }) => {
@@ -7,31 +7,36 @@ const ItemList = ({ items, dummy }) => {
 
   const handleAddItem = (item) => {
     // Dispatch an action
-    dispatch(addItem(item));
+    dispatch(addItems(item));
   };
 
   return (
-    <div>
+    <div className="menu-container">
       {items.map((item) => (
-        <div
-          data-testid="foodItems"
-          key={item.card.info.id}
-          className="item-container"
-        >
-          <div className="item-info">
-            <div className="item-name-price">
-              <span>{item.card.info.name}</span>
-              <span>- ₹ {item.card.info.price ? item.card.info.price / 100 : item.card.info.defaultPrice / 100}</span>
-            </div>
-            <p className="item-price">{item.card.info.description}</p>
-          </div>
-          <div className="item-image-container">
-            <button className="add-button" onClick={() => handleAddItem(item)}>
-              Add +
-            </button>
-            <img src={IMG_CDN_URL + item.card.info.imageId} className="item-image" />
-          </div>
-        </div>
+       <div className="menu-item" key={item?.id}>
+       <div className="menu-item-details">
+         <h3 className="item-title">{item?.name}</h3>
+         <p className="item-cost">
+           {item?.price > 0
+             ? new Intl.NumberFormat("en-IN", {
+                 style: "currency",
+                 currency: "INR",
+               }).format(item?.price / 100)
+             : " "}
+         </p>
+         <p className="item-desc">{item?.description}</p>
+       </div>
+       <div className="menu-img-wrapper">
+         {item?.imageId && (
+           <img
+             className="menu-item-img"
+             src={IMG_CDN_URL + item?.imageId}
+             alt={item?.name}
+           />
+         )}
+         <button className="add-btn" onClick={()=>handleAddItem(item)}> ADD +</button>
+       </div>
+     </div>
       ))}
     </div>
   );

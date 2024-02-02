@@ -358,6 +358,11 @@ a {
   justify-content: space-between;
   padding: 20px;
   border-bottom: rgba(40, 44, 63, 0.45) 0.5px solid;
+  /* min-height: 80vh; */
+}
+
+.menu-container {
+  min-height: 80vh;
 }
 
 .menu-item-details {
@@ -1350,6 +1355,7 @@ a {
   text-align: center;
   margin: 1rem 2rem;
   padding: 1rem 2rem;
+  margin-top: 80px;
 }
 
 .cart-header {
@@ -1431,4 +1437,9 @@ a {
 
 .item-image {
   width: 100%;
+}
+
+.cartheader{
+  display: flex;
+  justify-content: space-around;
 }
