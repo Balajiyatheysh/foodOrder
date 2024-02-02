@@ -35,7 +35,9 @@ const RestaurantMenu = () => {
 
   function handleAddItem (item){
     //dispatch an action
+    console.log(item);
     dispatch(addItems(item));
+
   }
 
   return !restaurant ? (

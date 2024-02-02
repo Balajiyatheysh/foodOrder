@@ -1347,7 +1347,31 @@ a {
 }
 
 .cart-container {
-  min-height: 80vh;
+  text-align: center;
+  margin: 1rem 2rem;
+  padding: 1rem 2rem;
+}
+
+.cart-header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cart-content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.clear-cart-button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.cart-empty-message {
+  color: #070062;
 }
 
 .contact-header {
@@ -1368,4 +1392,43 @@ a {
   padding: 0.5rem 1rem;
   background-color: #f5f5f5;
   border-radius: 0.5rem;
+}
+.item-container {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-info {
+  width: 75%;
+}
+
+.item-name-price {
+  padding-top: 0.5rem;
+}
+
+.item-price {
+  font-size: smaller;
+}
+
+.item-image-container {
+  width: 25%;
+  padding: 1rem;
+  position: relative;
+}
+
+.add-button {
+  padding: 0.5rem;
+  margin-left: 10rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.item-image {
+  width: 100%;
 }

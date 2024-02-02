@@ -48,3 +48,4 @@ test("should search result list for burger text input ", async () => {
 
   expect(cardsAfterSearch.length).toBe(4);
 });
+
