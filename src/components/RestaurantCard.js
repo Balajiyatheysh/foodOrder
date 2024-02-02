@@ -11,7 +11,7 @@ const RestaurantCard = ({
   avgRatingString,
 }) => {
   return (
-    <div className="card">
+    <div data-testid="resCard" className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} />
       <h3>{name}</h3>
       <h5>{cuisines.join(", ")}</h5>
@@ -22,17 +22,17 @@ const RestaurantCard = ({
             avgRatingString < 4
               ? { backgroundColor: "var(--light-red)" }
               : avgRatingString === "--"
-                ? { backgroundColor: "white", color: "black" }
-                : { color: "white" }
+              ? { backgroundColor: "white", color: "black" }
+              : { color: "white" }
           }
         >
           <i className="fa-solid fa-star"></i>
           {avgRatingString}
         </h4>
         <h4>•</h4>
-        <h4>{sla?.lastMileTravelString ?? '2.0 km'}</h4>
+        <h4>{sla?.lastMileTravelString ?? "2.0 km"}</h4>
         <h4>•</h4>
-        <h4>{costForTwo ?? '₹200 for two'}</h4>
+        <h4>{costForTwo ?? "₹200 for two"}</h4>
       </span>
     </div>
   );
