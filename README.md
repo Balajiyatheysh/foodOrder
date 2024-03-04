@@ -1,3 +1,33 @@
+# OnlineFood Order
+
+Built a functional online food order application, having like food search, search restaurant, and user interaction. Utilized React.js and modern web development practices to ensure a smooth and responsive user experience.
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Balajiyatheysh/foodOrder.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
 # React
 ## my location 12.961785, 77.534156
 
@@ -18,3 +48,21 @@
   - Install @babel/preset-react - to make JSX work in test cases
   - Include @babel/preset-react inside babel config file
   - Install @testing-library/jest-dom
+
+
+
+
+
+## Screenshots
+
+![App Screenshot](./screenshots/homepage.png)
+
+![App Screenshot](./screenshots/restaurantpagemenu.png)
+
+![App Screenshot](./screenshots/cartpage.png.png)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at balajiyatheysh87@gmail.com
+
