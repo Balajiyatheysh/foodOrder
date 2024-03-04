@@ -59,7 +59,7 @@ Start the server
 
 ![App Screenshot](./screenshots/restaurantpagemenu.png)
 
-![App Screenshot](./screenshots/cartpage.png.png)
+![App Screenshot](./screenshots/cartpage.png)
 
 
 ## Feedback
