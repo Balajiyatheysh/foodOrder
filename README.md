@@ -28,9 +28,6 @@ Start the server
   npm run start
 ```
 
-# React
-## my location 12.961785, 77.534156
-
 # Types of testing 
  - Unit testing 
  - Integration testing
